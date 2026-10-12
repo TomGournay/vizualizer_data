@@ -1,0 +1,319 @@
+{
+  "0v1": {
+    "espacement_hz": 0.017558547160770266,
+    "pics": [
+      {
+        "frequence_hz": 0.1053512829646216,
+        "module_fft_normalise": 9.183682028001435
+      },
+      {
+        "frequence_hz": 0.14046837728616213,
+        "module_fft_normalise": 10.474206401079217
+      },
+      {
+        "frequence_hz": 0.17558547160770266,
+        "module_fft_normalise": 13.98026098265654
+      },
+      {
+        "frequence_hz": 0.22826111309001346,
+        "module_fft_normalise": 22.034411403102613
+      },
+      {
+        "frequence_hz": 0.263378207411554,
+        "module_fft_normalise": 6.995746212527435
+      },
+      {
+        "frequence_hz": 0.33361239605463505,
+        "module_fft_normalise": 5.753054230257723
+      }
+    ],
+    "bord_basse_frequence_non_resolu": null
+  },
+  "1v1": {
+    "espacement_hz": 0.11640998253184197,
+    "pics": [],
+    "bord_basse_frequence_non_resolu": {
+      "frequence_hz": 0.11640998253184197,
+      "module_fft_normalise": 81.32150628756078
+    }
+  },
+  "1v2": {
+    "espacement_hz": 0.136465548061069,
+    "pics": [],
+    "bord_basse_frequence_non_resolu": {
+      "frequence_hz": 0.136465548061069,
+      "module_fft_normalise": 93.22458469018198
+    }
+  },
+  "1v3": {
+    "espacement_hz": 0.1262235135318462,
+    "pics": [],
+    "bord_basse_frequence_non_resolu": {
+      "frequence_hz": 0.1262235135318462,
+      "module_fft_normalise": 86.78011247489994
+    }
+  },
+  "2v1": {
+    "espacement_hz": 0.022106988352560218,
+    "pics": [
+      {
+        "frequence_hz": 0.1326419301153613,
+        "module_fft_normalise": 11.065667545547797
+      },
+      {
+        "frequence_hz": 0.2431768718781624,
+        "module_fft_normalise": 14.100009758994888
+      },
+      {
+        "frequence_hz": 0.30949783693584304,
+        "module_fft_normalise": 9.981165300960802
+      }
+    ],
+    "bord_basse_frequence_non_resolu": {
+      "frequence_hz": 0.022106988352560218,
+      "module_fft_normalise": 30.81834818747906
+    }
+  },
+  "2v2": {
+    "espacement_hz": 0.06154462157995426,
+    "pics": [
+      {
+        "frequence_hz": 0.24617848631981704,
+        "module_fft_normalise": 29.990859536762528
+      }
+    ],
+    "bord_basse_frequence_non_resolu": {
+      "frequence_hz": 0.06154462157995426,
+      "module_fft_normalise": 49.11187789307448
+    }
+  },
+  "2v3": {
+    "espacement_hz": 0.14374663335876506,
+    "pics": [
+      {
+        "frequence_hz": 0.2874932667175301,
+        "module_fft_normalise": 47.38445532584304
+      }
+    ],
+    "bord_basse_frequence_non_resolu": null
+  },
+  "3v1": {
+    "espacement_hz": 0.15422328557162715,
+    "pics": [],
+    "bord_basse_frequence_non_resolu": {
+      "frequence_hz": 0.15422328557162715,
+      "module_fft_normalise": 91.99984566038086
+    }
+  },
+  "3v3": {
+    "espacement_hz": 0.022932240005642188,
+    "pics": [
+      {
+        "frequence_hz": 0.1605256800394953,
+        "module_fft_normalise": 21.43275791616044
+      },
+      {
+        "frequence_hz": 0.22932240005642188,
+        "module_fft_normalise": 24.259951171951535
+      },
+      {
+        "frequence_hz": 0.3210513600789906,
+        "module_fft_normalise": 8.527517841249658
+      }
+    ],
+    "bord_basse_frequence_non_resolu": null
+  },
+  "4v1": {
+    "espacement_hz": 0.1935558752713747,
+    "pics": [
+      {
+        "frequence_hz": 0.3871117505427494,
+        "module_fft_normalise": 36.29799691644408
+      },
+      {
+        "frequence_hz": 1.9355587527137468,
+        "module_fft_normalise": 9.984410963115156
+      }
+    ],
+    "bord_basse_frequence_non_resolu": null
+  },
+  "4v3": {
+    "espacement_hz": 0.041529751417461805,
+    "pics": [
+      {
+        "frequence_hz": 0.24917850850477083,
+        "module_fft_normalise": 20.373331299604295
+      }
+    ],
+    "bord_basse_frequence_non_resolu": {
+      "frequence_hz": 0.041529751417461805,
+      "module_fft_normalise": 51.097061511993395
+    }
+  },
+  "5v1": {
+    "espacement_hz": 0.1335881905987596,
+    "pics": [],
+    "bord_basse_frequence_non_resolu": {
+      "frequence_hz": 0.1335881905987596,
+      "module_fft_normalise": 97.72729471812798
+    }
+  },
+  "5v2": {
+    "espacement_hz": 0.12266052177846969,
+    "pics": [],
+    "bord_basse_frequence_non_resolu": {
+      "frequence_hz": 0.12266052177846969,
+      "module_fft_normalise": 58.174756279052424
+    }
+  },
+  "6v4": {
+    "espacement_hz": 0.1384638450970074,
+    "pics": [],
+    "bord_basse_frequence_non_resolu": {
+      "frequence_hz": 0.1384638450970074,
+      "module_fft_normalise": 61.52842394181963
+    }
+  },
+  "6v5": {
+    "espacement_hz": 0.06185760353593718,
+    "pics": [],
+    "bord_basse_frequence_non_resolu": {
+      "frequence_hz": 0.06185760353593718,
+      "module_fft_normalise": 72.67555417902449
+    }
+  },
+  "6v6": {
+    "espacement_hz": 0.17172575307285406,
+    "pics": [],
+    "bord_basse_frequence_non_resolu": {
+      "frequence_hz": 0.17172575307285406,
+      "module_fft_normalise": 97.794872833316
+    }
+  },
+  "7v1": {
+    "espacement_hz": 0.15515736774677283,
+    "pics": [
+      {
+        "frequence_hz": 0.31031473549354566,
+        "module_fft_normalise": 49.6149969609624
+      }
+    ],
+    "bord_basse_frequence_non_resolu": null
+  },
+  "7v3": {
+    "espacement_hz": 0.1675781391614998,
+    "pics": [
+      {
+        "frequence_hz": 0.5027344174844994,
+        "module_fft_normalise": 32.91863621210376
+      }
+    ],
+    "bord_basse_frequence_non_resolu": {
+      "frequence_hz": 0.1675781391614998,
+      "module_fft_normalise": 74.44855458295063
+    }
+  },
+  "8v3": {
+    "espacement_hz": 0.19030222705339214,
+    "pics": [
+      {
+        "frequence_hz": 0.9515111352669607,
+        "module_fft_normalise": 13.568809633490417
+      }
+    ],
+    "bord_basse_frequence_non_resolu": {
+      "frequence_hz": 0.19030222705339214,
+      "module_fft_normalise": 41.91487985965679
+    }
+  },
+  "9v2": {
+    "espacement_hz": 0.16274249483387243,
+    "pics": [],
+    "bord_basse_frequence_non_resolu": {
+      "frequence_hz": 0.16274249483387243,
+      "module_fft_normalise": 59.993410545500055
+    }
+  },
+  "9v3": {
+    "espacement_hz": 0.1903621548475054,
+    "pics": [],
+    "bord_basse_frequence_non_resolu": {
+      "frequence_hz": 0.1903621548475054,
+      "module_fft_normalise": 52.21153725452252
+    }
+  },
+  "10v3": {
+    "espacement_hz": 0.13200511851321725,
+    "pics": [],
+    "bord_basse_frequence_non_resolu": {
+      "frequence_hz": 0.13200511851321725,
+      "module_fft_normalise": 52.172345873641376
+    }
+  },
+  "11v3": {
+    "espacement_hz": 0.07971411948802665,
+    "pics": [],
+    "bord_basse_frequence_non_resolu": {
+      "frequence_hz": 0.07971411948802665,
+      "module_fft_normalise": 64.01376313567586
+    }
+  },
+  "12v1": {
+    "espacement_hz": 0.19739655236284717,
+    "pics": [],
+    "bord_basse_frequence_non_resolu": {
+      "frequence_hz": 0.19739655236284717,
+      "module_fft_normalise": 67.9078539980841
+    }
+  },
+  "12v2": {
+    "espacement_hz": 0.17890222216812682,
+    "pics": [],
+    "bord_basse_frequence_non_resolu": {
+      "frequence_hz": 0.17890222216812682,
+      "module_fft_normalise": 78.88206604513978
+    }
+  },
+  "calib": {
+    "espacement_hz": 0.008231160025315924,
+    "pics": [],
+    "bord_basse_frequence_non_resolu": {
+      "frequence_hz": 0.008231160025315924,
+      "module_fft_normalise": 27.549895730020406
+    }
+  },
+  "quai2": {
+    "espacement_hz": 0.05114980934725255,
+    "pics": [
+      {
+        "frequence_hz": 0.2045992373890102,
+        "module_fft_normalise": 2.488579439980726
+      }
+    ],
+    "bord_basse_frequence_non_resolu": {
+      "frequence_hz": 0.05114980934725255,
+      "module_fft_normalise": 8.141105189226282
+    }
+  },
+  "quai": {
+    "espacement_hz": 0.028722796067670118,
+    "pics": [],
+    "bord_basse_frequence_non_resolu": {
+      "frequence_hz": 0.028722796067670118,
+      "module_fft_normalise": 65.54799081860939
+    }
+  },
+  "vague": {
+    "espacement_hz": 0.061318567089751766,
+    "pics": [
+      {
+        "frequence_hz": 0.5518671038077659,
+        "module_fft_normalise": 8.941042367405677
+      }
+    ],
+    "bord_basse_frequence_non_resolu": {
+      "frequence_hz": 0.061318567089751766,
+      "module_fft_normalise": 23.58945510926862
+    }
+  }
+}

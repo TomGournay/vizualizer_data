@@ -1,0 +1,206 @@
+{
+  "path_root": "/home/crc/experiment_result/data_exp",
+  "poids": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "repetitions": [
+    1,
+    2,
+    3
+  ],
+  "stationary_criteria": {
+    "xacc_robot": {
+      "enabled": true,
+      "mode": "variation",
+      "epsilon": 0.05,
+      "cutoff_freq": 0.1
+    },
+    "yacc_robot": {
+      "enabled": true,
+      "mode": "variation",
+      "epsilon": 0.05,
+      "cutoff_freq": 0.1
+    },
+    "zacc_robot": {
+      "enabled": true,
+      "mode": "variation",
+      "epsilon": 0.05,
+      "cutoff_freq": 0.1
+    },
+    "pitch_deg": {
+      "enabled": true,
+      "target": -90.0,
+      "tolerance": 6.0
+    },
+    "roll_deg": {
+      "enabled": true,
+      "mode": "variation",
+      "epsilon": 180.0,
+      "period": 360.0
+    },
+    "yaw_deg": {
+      "enabled": true,
+      "target": 0.0,
+      "tolerance": 180.0,
+      "period": 360.0
+    },
+    "xgyro_robot": {
+      "enabled": true,
+      "target": 0,
+      "tolerance": 0.8
+    },
+    "ygyro_robot": {
+      "enabled": true,
+      "target": 0,
+      "tolerance": 0.8
+    },
+    "zgyro_robot": {
+      "enabled": true,
+      "target": 0,
+      "tolerance": 0.8
+    }
+  },
+  "sweep_values": {
+    "xacc_robot": [
+      0.01,
+      0.02,
+      0.03,
+      0.05,
+      0.075,
+      0.1,
+      0.15,
+      0.2
+    ],
+    "yacc_robot": [
+      0.01,
+      0.02,
+      0.03,
+      0.05,
+      0.075,
+      0.1,
+      0.15,
+      0.2
+    ],
+    "zacc_robot": [
+      0.01,
+      0.02,
+      0.03,
+      0.05,
+      0.075,
+      0.1,
+      0.15,
+      0.2
+    ],
+    "pitch_deg": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      7,
+      8,
+      10,
+      12
+    ],
+    "roll_deg": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      8,
+      10,
+      15,
+      20,
+      30,
+      45,
+      60,
+      90,
+      120,
+      180,
+      270,
+      360
+    ],
+    "yaw_deg": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      8,
+      10,
+      15,
+      20,
+      30,
+      45,
+      60,
+      90,
+      120,
+      180
+    ],
+    "xgyro_robot": [
+      0.1,
+      0.2,
+      0.4,
+      0.6,
+      0.8,
+      1.0,
+      1.2,
+      1.6,
+      2.0
+    ],
+    "ygyro_robot": [
+      0.1,
+      0.2,
+      0.4,
+      0.6,
+      0.8,
+      1.0,
+      1.2,
+      1.6,
+      2.0
+    ],
+    "zgyro_robot": [
+      0.1,
+      0.2,
+      0.4,
+      0.6,
+      0.8,
+      1.0,
+      1.2,
+      1.6,
+      2.0
+    ],
+    "min_duration_s": [
+      0.5,
+      1,
+      1.5,
+      2,
+      3,
+      4,
+      5,
+      8,
+      10
+    ]
+  },
+  "contexts": {
+    "actuels": 1.0,
+    "intermediaires": 1.5,
+    "permissifs": 2.0
+  },
+  "min_duration_s": 2.0,
+  "speed_cutoff_hz": 0.1,
+  "min_sink_speed": 0.05,
+  "min_depth_change": 0.2
+}
