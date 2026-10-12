@@ -45,9 +45,9 @@ Stationary_criteria = {
     "xacc_robot": {"enabled": True, "mode": "variation", "epsilon": 0.05, "cutoff_freq": Cutoff_freq},
     "yacc_robot": {"enabled": True, "mode": "variation", "epsilon": 0.05, "cutoff_freq": Cutoff_freq},
     "zacc_robot": {"enabled": True, "mode": "variation", "epsilon": 0.05, "cutoff_freq": Cutoff_freq},
-    "pitch_deg": {"enabled": True, "target": -90.0, "tolerance": 6.0},
+    "pitch_deg": {"enabled": True, "target": -90.0, "tolerance": 6.0, "period": 360.0},
     "roll_deg": {"enabled": True, "mode": "variation", "epsilon": 180.0, "period": 360.0},
-    "yaw_deg": {"enabled": True, "target": 0.0, "tolerance": 180.0, "period": 360.0},
+    "yaw_deg": {"enabled": True, "target": 0.0, "tolerance": 60.0, "period": 360.0},
     "xgyro_robot": {"enabled": True, "target": 0, "tolerance": gyro_tol},
     "ygyro_robot": {"enabled": True, "target": 0, "tolerance": gyro_tol},
     "zgyro_robot": {"enabled": True, "target": 0, "tolerance": gyro_tol},
@@ -125,6 +125,11 @@ def studied_values(value, config=None):
                             center=config.get("center", Rolling_center), cutoff_freq=cutoff)
 
 
+def angular_deviation(angle, target, period=360.0):
+    """Plus petit écart signé à la cible, avec une période angulaire."""
+    return (angle - target + period / 2) % period - period / 2
+
+
 def detect_intervals(imu, start, end):
     """Combine les critères IMU activés dans la plage étudiée."""
     criteria = [(name, options) for name, options in Stationary_criteria.items()
@@ -135,6 +140,9 @@ def detect_intervals(imu, start, end):
     labels = []
     for name, options in criteria:
         signal = get_value(imu, name)
+        mode = options.get("mode", "target")
+        if mode == "target" and options.get("period"):
+            signal = angular_deviation(signal, options["target"], options["period"])
         cutoff = options.get("cutoff_freq")
         label = f"{name} brut"
         if cutoff is not None:
@@ -145,9 +153,10 @@ def detect_intervals(imu, start, end):
             signal = moving_average(signal, window_s=window_s, window_n=window_n)
             window = f"{window_n} valeurs" if window_n is not None else f"{window_s:g} s"
             label += f" — moyenne glissante ({window})"
-        mode = options.get("mode", "target")
         thresholds = {key: options[key] for key in
                       (("target", "tolerance") if mode == "target" else ("epsilon",))}
+        if mode == "target" and options.get("period"):
+            thresholds["target"] = 0.0
         intervals = [interval for lo, hi in intervals
                      for interval in stationary_intervals(signal.loc[lo:hi], mode=mode,
                                                           min_duration=Stationary_min_duration,
@@ -175,6 +184,7 @@ def build_panels(datasets, subplots):
         intervals = None
         depth = None
         sink_speed = None
+        attitude_squared = None
         detection_label = ""
         if config.get("stationary", False):
             bar30 = datasets[folder][f"{folder.name}_bar30.jsonl"]
@@ -184,6 +194,9 @@ def build_panels(datasets, subplots):
             if cutoff is not None:
                 sink_speed = filter_series(sink_speed, cutoff)
             imu = datasets[folder][f"{Path(folder).name}_imu.jsonl"]
+            yaw = angular_deviation(get_value(imu, "yaw_deg"), Stationary_criteria["yaw_deg"]["target"])
+            pitch = angular_deviation(get_value(imu, "pitch_deg"), Stationary_criteria["pitch_deg"]["target"])
+            attitude_squared = yaw**2 + pitch**2  # Angles bruts, sans contribution du roll.
             # Recherche dans la plage affichée et couverte par le signal tracé.
             start = config.get("tmin")
             end = config.get("tmax")
@@ -195,6 +208,7 @@ def build_panels(datasets, subplots):
         variable_names = ", ".join(variables)
         panels.append(dict(value=values, intervals=intervals,
                            detection_label=detection_label, depth=depth, sink_speed=sink_speed,
+                           attitude_squared=attitude_squared,
                            tmin=config.get("tmin"), tmax=config.get("tmax"),
                            ymin=config.get("ymin"), ymax=config.get("ymax"),
                            stats=config.get("stats", False),
@@ -227,16 +241,18 @@ def filter_stationary_outliers(panels, max_std_inflation):
 
 
 def export_intervals(panels, poids):
-    """Formate un bloc à copier dans le dictionnaire essais de repet.py."""
-    speeds, depths = [], []
+    """Formate un bloc à copier dans essais de 2repet.py ; d est en degrés."""
+    speeds, depths, deviations = [], [], []
     for panel in panels:
         for start, end in panel["intervals"] or []:
             speeds.append(round(float(panel["sink_speed"].loc[start:end].mean()), 3))
             depths.append(round(float(panel["depth"].loc[start:end].mean()), 3))
+            deviations.append(round(mean(panel["attitude_squared"].loc[start:end].dropna())**0.5, 3))
     return (
         f"    {poids}: {{\n"
         f'        "v_r": {speeds},\n'
         f'        "L_touret": {depths},\n'
+        f'        "d": {deviations},\n'
         "    },\n"
     )
 

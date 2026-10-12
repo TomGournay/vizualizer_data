@@ -1,0 +1,7 @@
+data/plots/*.html
+*/__pycache__/
+*.html
+data/coulees.txt
+*/*.png
+vague/data_filtre/*
+*/*.json

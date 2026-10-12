@@ -53,7 +53,7 @@ Min_depth_change = 0.20      # m, augmentation minimale de profondeur
 Export_file = Path(__file__).resolve().parent / "coulees.txt"
 
 # Template 1 : plusieurs fichiers du même dossier.
-folder_name = "4v1"
+folder_name = "1v2"
 Show_plot = True
 
 Subplots_meme_dossier = [
